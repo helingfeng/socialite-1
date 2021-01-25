@@ -59,7 +59,7 @@ class WeiboProvider extends AbstractProvider implements ProviderInterface
      */
     protected function getAuthUrl($state)
     {
-        return $this->buildAuthUrlFromBase($this->baseUrl.'/oauth2/authorize', $state);
+        return $this->buildAuthUrlFromBase($this->baseUrl . '/oauth2/authorize', $state);
     }
 
     /**
@@ -69,7 +69,7 @@ class WeiboProvider extends AbstractProvider implements ProviderInterface
      */
     protected function getTokenUrl()
     {
-        return $this->baseUrl.'/'.$this->version.'/oauth2/access_token';
+        return $this->baseUrl . '/' . $this->version . '/oauth2/access_token';
     }
 
     /**
@@ -93,7 +93,7 @@ class WeiboProvider extends AbstractProvider implements ProviderInterface
      */
     protected function getUserByToken(AccessTokenInterface $token)
     {
-        $response = $this->getHttpClient()->get($this->baseUrl.'/'.$this->version.'/users/show.json', [
+        $response = $this->getHttpClient()->get($this->baseUrl . '/' . $this->version . '/users/show.json', [
             'query' => [
                 'uid' => $token['uid'],
                 'access_token' => $token->getToken(),
@@ -106,7 +106,7 @@ class WeiboProvider extends AbstractProvider implements ProviderInterface
         $response = json_decode($response->getBody(), true);
 
         if (!empty($response['error'])) {
-            throw new \InvalidArgumentException('You have getUserByToken error! response :' . $response->getBody());
+            throw new \InvalidArgumentException('You have getUserByToken error! response :' . json_encode($response, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
         }
 
         return $response;
