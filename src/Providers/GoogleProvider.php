@@ -9,12 +9,12 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\Socialite\Providers;
+namespace Laravel\Socialite\Providers;
 
 use GuzzleHttp\ClientInterface;
-use Overtrue\Socialite\AccessTokenInterface;
-use Overtrue\Socialite\ProviderInterface;
-use Overtrue\Socialite\User;
+use Laravel\Socialite\AccessTokenInterface;
+use Laravel\Socialite\ProviderInterface;
+use Laravel\Socialite\User;
 
 /**
  * Class GoogleProvider.

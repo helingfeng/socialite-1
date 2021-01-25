@@ -1,10 +1,10 @@
 <?php
 
-namespace Overtrue\Socialite\Providers;
+namespace Laravel\Socialite\Providers;
 
 use GuzzleHttp\ClientInterface;
-use Overtrue\Socialite\ProviderInterface;
-use Overtrue\Socialite\User;
+use Laravel\Socialite\ProviderInterface;
+use Laravel\Socialite\User;
 
 /**
  * @see https://opendocs.alipay.com/open/289/105656
@@ -53,7 +53,7 @@ class AlipayProvider extends AbstractProvider implements ProviderInterface
 
     /**
      * @param string $code
-     * @return \Overtrue\Socialite\AccessTokenInterface
+     * @return \Laravel\Socialite\AccessTokenInterface
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function getAccessToken($code)
@@ -98,7 +98,7 @@ class AlipayProvider extends AbstractProvider implements ProviderInterface
     }
 
     /**
-     * @param \Overtrue\Socialite\AccessTokenInterface $token
+     * @param \Laravel\Socialite\AccessTokenInterface $token
      * @return array
      * @throws \GuzzleHttp\Exception\GuzzleException
      */

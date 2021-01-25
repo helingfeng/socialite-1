@@ -9,16 +9,16 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\Socialite\Providers;
+namespace Laravel\Socialite\Providers;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
-use Overtrue\Socialite\AccessToken;
-use Overtrue\Socialite\AccessTokenInterface;
-use Overtrue\Socialite\AuthorizeFailedException;
-use Overtrue\Socialite\Config;
-use Overtrue\Socialite\InvalidStateException;
-use Overtrue\Socialite\ProviderInterface;
+use Laravel\Socialite\AccessToken;
+use Laravel\Socialite\AccessTokenInterface;
+use Laravel\Socialite\AuthorizeFailedException;
+use Laravel\Socialite\Config;
+use Laravel\Socialite\InvalidStateException;
+use Laravel\Socialite\ProviderInterface;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -63,7 +63,7 @@ abstract class AbstractProvider implements ProviderInterface
     protected $clientSecret;
 
     /**
-     * @var \Overtrue\Socialite\AccessTokenInterface
+     * @var \Laravel\Socialite\AccessTokenInterface
      */
     protected $accessToken;
 
@@ -158,7 +158,7 @@ abstract class AbstractProvider implements ProviderInterface
     /**
      * Get the raw user for the given access token.
      *
-     * @param \Overtrue\Socialite\AccessTokenInterface $token
+     * @param \Laravel\Socialite\AccessTokenInterface $token
      *
      * @return array
      */
@@ -169,7 +169,7 @@ abstract class AbstractProvider implements ProviderInterface
      *
      * @param array $user
      *
-     * @return \Overtrue\Socialite\User
+     * @return \Laravel\Socialite\User
      */
     abstract protected function mapUserToObject(array $user);
 
@@ -252,7 +252,7 @@ abstract class AbstractProvider implements ProviderInterface
     }
 
     /**
-     * @param \Overtrue\Socialite\AccessTokenInterface $accessToken
+     * @param \Laravel\Socialite\AccessTokenInterface $accessToken
      *
      * @return $this
      */
@@ -268,7 +268,7 @@ abstract class AbstractProvider implements ProviderInterface
      *
      * @param string $code
      *
-     * @return \Overtrue\Socialite\AccessTokenInterface
+     * @return \Laravel\Socialite\AccessTokenInterface
      */
     public function getAccessToken($code)
     {
@@ -461,7 +461,7 @@ abstract class AbstractProvider implements ProviderInterface
      *
      * @param \Psr\Http\Message\StreamInterface|array $body
      *
-     * @return \Overtrue\Socialite\AccessTokenInterface
+     * @return \Laravel\Socialite\AccessTokenInterface
      */
     protected function parseAccessToken($body)
     {

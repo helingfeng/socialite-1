@@ -9,14 +9,14 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\Socialite\Providers;
+namespace Laravel\Socialite\Providers;
 
-use Overtrue\Socialite\AccessToken;
-use Overtrue\Socialite\AccessTokenInterface;
-use Overtrue\Socialite\AuthorizeFailedException;
-use Overtrue\Socialite\InvalidStateException;
-use Overtrue\Socialite\ProviderInterface;
-use Overtrue\Socialite\User;
+use Laravel\Socialite\AccessToken;
+use Laravel\Socialite\AccessTokenInterface;
+use Laravel\Socialite\AuthorizeFailedException;
+use Laravel\Socialite\InvalidStateException;
+use Laravel\Socialite\ProviderInterface;
+use Laravel\Socialite\User;
 
 /**
  * Class FeiShuProvider.
@@ -85,7 +85,7 @@ class FeiShuProvider extends AbstractProvider implements ProviderInterface
     /**
      * 获取 app_access_token.
      *
-     * @return \Overtrue\Socialite\AccessToken
+     * @return \Laravel\Socialite\AccessToken
      */
     public function getAccessToken($code = '')
     {
@@ -115,7 +115,7 @@ class FeiShuProvider extends AbstractProvider implements ProviderInterface
      *
      * @param \Psr\Http\Message\StreamInterface|array $body
      *
-     * @return \Overtrue\Socialite\AccessTokenInterface
+     * @return \Laravel\Socialite\AccessTokenInterface
      */
     protected function parseAccessToken($body)
     {

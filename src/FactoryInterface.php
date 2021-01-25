@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\Socialite;
+namespace Laravel\Socialite;
 
 /**
  * Interface FactoryInterface.
@@ -21,7 +21,7 @@ interface FactoryInterface
      *
      * @param string $driver
      *
-     * @return \Overtrue\Socialite\ProviderInterface
+     * @return \Laravel\Socialite\ProviderInterface
      */
     public function driver($driver);
 }

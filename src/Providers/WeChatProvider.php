@@ -9,13 +9,13 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\Socialite\Providers;
+namespace Laravel\Socialite\Providers;
 
-use Overtrue\Socialite\AccessTokenInterface;
-use Overtrue\Socialite\InvalidArgumentException;
-use Overtrue\Socialite\ProviderInterface;
-use Overtrue\Socialite\User;
-use Overtrue\Socialite\WeChatComponentInterface;
+use Laravel\Socialite\AccessTokenInterface;
+use Laravel\Socialite\InvalidArgumentException;
+use Laravel\Socialite\ProviderInterface;
+use Laravel\Socialite\User;
+use Laravel\Socialite\WeChatComponentInterface;
 
 /**
  * Class WeChatProvider.

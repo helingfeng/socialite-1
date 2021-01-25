@@ -9,7 +9,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\Socialite;
+namespace Laravel\Socialite;
 
 use Closure;
 use InvalidArgumentException;
@@ -24,7 +24,7 @@ class SocialiteManager implements FactoryInterface
     /**
      * The configuration.
      *
-     * @var \Overtrue\Socialite\Config
+     * @var \Laravel\Socialite\Config
      */
     protected $config;
 
@@ -93,7 +93,7 @@ class SocialiteManager implements FactoryInterface
     /**
      * Set config instance.
      *
-     * @param \Overtrue\Socialite\Config $config
+     * @param \Laravel\Socialite\Config $config
      *
      * @return $this
      */

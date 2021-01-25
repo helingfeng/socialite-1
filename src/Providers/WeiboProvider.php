@@ -9,11 +9,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\Socialite\Providers;
+namespace Laravel\Socialite\Providers;
 
-use Overtrue\Socialite\AccessTokenInterface;
-use Overtrue\Socialite\ProviderInterface;
-use Overtrue\Socialite\User;
+use Laravel\Socialite\AccessTokenInterface;
+use Laravel\Socialite\ProviderInterface;
+use Laravel\Socialite\User;
 
 /**
  * Class WeiboProvider.
@@ -87,7 +87,7 @@ class WeiboProvider extends AbstractProvider implements ProviderInterface
     /**
      * Get the raw user for the given access token.
      *
-     * @param \Overtrue\Socialite\AccessTokenInterface $token
+     * @param \Laravel\Socialite\AccessTokenInterface $token
      *
      * @return array
      */
@@ -111,7 +111,7 @@ class WeiboProvider extends AbstractProvider implements ProviderInterface
      *
      * @param array $user
      *
-     * @return \Overtrue\Socialite\User
+     * @return \Laravel\Socialite\User
      */
     protected function mapUserToObject(array $user)
     {

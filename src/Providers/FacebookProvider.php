@@ -9,11 +9,11 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Overtrue\Socialite\Providers;
+namespace Laravel\Socialite\Providers;
 
-use Overtrue\Socialite\AccessTokenInterface;
-use Overtrue\Socialite\ProviderInterface;
-use Overtrue\Socialite\User;
+use Laravel\Socialite\AccessTokenInterface;
+use Laravel\Socialite\ProviderInterface;
+use Laravel\Socialite\User;
 
 /**
  * Class FacebookProvider.
@@ -78,7 +78,7 @@ class FacebookProvider extends AbstractProvider implements ProviderInterface
      *
      * @param string $code
      *
-     * @return \Overtrue\Socialite\AccessToken
+     * @return \Laravel\Socialite\AccessToken
      */
     public function getAccessToken($code)
     {
