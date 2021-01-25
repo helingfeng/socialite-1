@@ -434,7 +434,7 @@ abstract class AbstractProvider implements ProviderInterface
             return false;
         }
 
-        $state = $this->request->getSession()->get('state');
+        $state = session()->get('state');
 
         return !(strlen($state) > 0 && $this->request->get('state') === $state);
     }
@@ -570,15 +570,7 @@ abstract class AbstractProvider implements ProviderInterface
         }
 
         $state = sha1(uniqid(mt_rand(1, 1000000), true));
-        $session = $this->request->getSession();
-
-        if (is_callable([$session, 'put'])) {
-            $session->put('state', $state);
-        } elseif (is_callable([$session, 'set'])) {
-            $session->set('state', $state);
-        } else {
-            return false;
-        }
+        session()->put('state', $state);
 
         return $state;
     }
