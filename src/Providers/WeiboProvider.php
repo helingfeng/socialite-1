@@ -87,9 +87,9 @@ class WeiboProvider extends AbstractProvider implements ProviderInterface
     /**
      * Get the raw user for the given access token.
      *
-     * @param \Laravel\Socialite\AccessTokenInterface $token
-     *
-     * @return array
+     * @param AccessTokenInterface $token
+     * @return array|mixed
+     * @throws \GuzzleHttp\Exception\GuzzleException
      */
     protected function getUserByToken(AccessTokenInterface $token)
     {
@@ -103,7 +103,13 @@ class WeiboProvider extends AbstractProvider implements ProviderInterface
             ],
         ]);
 
-        return json_decode($response->getBody(), true);
+        $response = json_decode($response->getBody(), true);
+
+        if (!empty($response['error'])) {
+            throw new \InvalidArgumentException('You have getUserByToken error! response :' . $response->getBody());
+        }
+
+        return $response;
     }
 
     /**
