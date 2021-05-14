@@ -107,7 +107,7 @@ abstract class AbstractProvider implements ProviderInterface
      *
      * @var bool
      */
-    protected $stateless = false;
+    protected $stateless = true;
 
     /**
      * The options for guzzle\client.
